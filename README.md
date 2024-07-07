@@ -1,2 +1,2 @@
 # js-pro
-A code repo for JavaScript series at chai  
+A code repo for JavaScript series 
