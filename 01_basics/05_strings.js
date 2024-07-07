@@ -3,7 +3,7 @@ const repoCount = 10
 
 // console.log(name + repoCount + "Value"); // this is Old
 
-console.log(`Hello my name is ${name} and my repo count is ${repoCount}`); // StringInterpolation
+console.log(`Hello my name is ${name} and my repo count is ${repoCount}`); // StringInterpolation ⭐⭐⭐
 
 
 const gameName = new String("abhi-hc-com") // 🏃‍♂️ in browser
