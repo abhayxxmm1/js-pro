@@ -6,8 +6,8 @@ const repoCount = 10
 console.log(`Hello my name is ${name} and my repo count is ${repoCount}`); // StringInterpolation
 
 
-const gameName = new String("abhi-hc-com")
-
+const gameName = new String("abhi-hc-com") // 🏃‍♂️ in browser
+// console.log(gameName); // 🏃‍♂️ in browser
 // console.log(gameName[1]); // here accesing keyValue Pair
 // console.log(gameName.__proto__);
 
