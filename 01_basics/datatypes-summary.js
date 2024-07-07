@@ -33,3 +33,29 @@ const myFunction = function () { // myFunction(returns)=> functionObject
 
 
 console.log(typeof myObj);
+
+
+// +++++++++++++++++++++++++++++++++++++++++++++++
+
+// Stack (Primitive[copy]), Heap (Non-Primitive[refrenceOfOriginalValue])
+
+let myYtName = "abhay.com"
+
+let anotherName = myYtName // copy in stack of myYt
+anotherName = "chaiaurcode"
+
+console.log(myYtName);
+console.log(anotherName);
+
+
+let userOne = { // OriginalValueRefrence in Heap
+    email: "user@google.com",
+    upi: "user@ybl"
+}
+
+let userTwo = userOne
+
+userTwo.email = "abhay@google.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
