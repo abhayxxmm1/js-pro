@@ -1,6 +1,8 @@
 // const tinderUser = new Object() //singelton Object💻
  const tinderUser = {} // Non-singelton Object
 
-const 
+tinderUser.id = "123abc" // unique id देदेते है
+tinderUser.name = "samm"
+tinderUser.isLoggedIn = false
 
  console.log(tinderUser);
