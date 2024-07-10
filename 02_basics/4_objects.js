@@ -7,4 +7,17 @@ tinderUser.id = "123abc" // unique id देदेते है
 tinderUser.name = "samm"
 tinderUser.isLoggedIn = false
 
- console.log(tinderUser);
+//  console.log(tinderUser);
+const regularUser = {
+    email: "abhay@gmail.com",
+    fullname: {
+        userfullname : {
+            firstname: "abhay",
+            lastname: "ghongade"
+        }
+    }
+}
+
+console.log(regularUser.fullname);
+console.log(regularUser.fullname.userfullname);
+console.log(regularUser.fullname.userfullname.lastname);
