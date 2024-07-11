@@ -58,3 +58,18 @@ console.log(Object.values(tinderUser));
 console.log(Object.entries(tinderUser)); // array mai array
 
 console.log(tinderUser.hasOwnProperty('isLoggedIn')); // to check it has property
+
+// ++++++++++++++++++++++++ de_Structuring ++++++++++++++++++++++++
+
+const course = {
+    coursename: "js in h",
+    price: "999",
+    courseInstructor: "hitesh"
+}
+
+// course.courseInstructor
+
+const {courseInstructor: instructor} = course // destructuring object into small value
+
+// console.log(courseInstructor);
+console.log(instructor);
