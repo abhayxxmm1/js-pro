@@ -68,16 +68,34 @@ const course = {
 }
 
 // course.courseInstructor
-
 const {courseInstructor: instructor} = course // destructuring object into small value
 
 // console.log(courseInstructor);
 console.log(instructor);
 
 
-
+/* // react example for de Structuring using {} {company}
 const navbar = ({company}) => {
    
 }
 
-navbar(company = "abhay")
+navbar(company = "abhay") */
+
+
+// +++++++++++++++ JSON {} +++++++++++++++++
+// +++++++++++++++ API's call {JSON➡️Object format } https://api.github.com/users/hiteshchoudhary conert into object (fletch)
+// { 
+//     "key in string": "values in string",
+//     "name": "abhi",
+//     "coursename": "js",
+//     "price": "0"
+// }
+
+// API in format of Array(applying loops etc)
+[
+    {},
+    {},
+    {}
+]
+
+// https://randomuser.me/  => https://jsonformatter.org/
