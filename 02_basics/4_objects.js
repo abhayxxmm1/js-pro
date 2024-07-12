@@ -73,3 +73,11 @@ const {courseInstructor: instructor} = course // destructuring object into small
 
 // console.log(courseInstructor);
 console.log(instructor);
+
+
+
+const navbar = ({company}) => {
+   
+}
+
+navbar(company = "abhay")
