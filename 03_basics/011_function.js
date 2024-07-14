@@ -21,7 +21,20 @@ function handleObject(anyobject){
 }
 
 handleObject(user) /* functionCall */
-/* handleObject({ // or like this also
+/* handleObject({ // or direct Object pass
     username: "sam",
     price: 99
 }) */
+
+
+
+
+/* 🔸Array pass Usecase*/
+const myNewArray = [200, 400 ,100, 600]
+
+function returnSecondValue(getArray) {
+    return getArray[2]
+}
+
+// console.log(returnSecondValue(myNewArray));
+console.log(returnSecondValue([200, 400, 500, 1200]));
