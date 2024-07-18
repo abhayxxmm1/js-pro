@@ -41,4 +41,28 @@ const chai = () => {
 }
 
 
-chai()
+// chai()
+
+// const addTwo = (num1, num2) => {
+//     return num1 + num2
+// }
+
+/*          🔸2️⃣Implicite return     */
+// const addTwo = (num1, num2) =>  num1 + num2
+
+/*          🔸3️⃣Paramthesis use    */
+// const addTwo = (num1, num2) =>  ( num1 + num2 ) // useful while react
+
+const addTwo = (num1, num2) =>  ( {username: "hitesh"} )
+
+console.log(addTwo(4,9));
+
+
+
+
+
+const myArray = [2, 5, 4, 7, 8]
+
+// myArray.forEach(function () {}) // eg of correct syntax
+// myArray.forEach(() => {})
+// myArray.forEach(() => ())
