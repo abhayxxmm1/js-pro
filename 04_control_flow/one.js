@@ -1,3 +1,7 @@
+// कूच situation हो तो ये control execute हो "or"
+// कूच situation हो तो ये control execute हो 
+
+
 // if 
 const isUserLoggedIn = true
 const temprature = 5
@@ -53,10 +57,10 @@ const debitCard = true
 const loggedInFromGoogle = false
 const loggedInFromEmail = true
 
-if (isUserLoggedIn2 && debitCard && 2==3 /* 2==2 */) {
+if (isUserLoggedIn2 && debitCard && 2==3 /* 2==2 ⭐all conditon true*/) {
     console.log("allow to buy course");
 }
 
-if (loggedInFromGoogle || loggedInFromEmail /* multiple or can be used || */) {
+if (loggedInFromGoogle || loggedInFromEmail /* multiple or can be used || ⭐one/atleast one condition true अपना  काम करुंगा condition के अंदर जाऊंगा*/) {
     console.log("User logged in");
 }
