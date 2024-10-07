@@ -5,16 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM</title>
 </head>
-<body style="background-color: #212121; column-rule-color: #fff;">
+<body style="background-color: #212121; color: #fff;">
     <ul class="language">
         <li>javascript</li>
     </ul>
 </body>
 <script>
     function addLanguage(langName) {
-       const li = document.createElement('li')
+       const li = document.createElement('li');
        li.innerHTML = `${langName}`
        document.querySelector('.language').appendChild(li)
     }
+    addLanguage("python")
+    addLanguage("typescript")
+
+    function addOptiLanguage(langName){
+        const li = document.createElement('li'); // concentrated seprately bcoz of scope
+        li.appendChild(document.createTextNode(langName)) // always go with append child ⭐ this method
+        document.querySelector('.language').appendChild(li)
+    }
+    addOptiLanguage("go lang")
+
+    //Edit values 
+    const secondLang = document.querySelector("li:nth-child(2)")
+    console.log(secondLang);
+    //secondLang.innerHTML = "BKL" 1️⃣
+    const newli = document.createElement('li')
+    newli.textContent = "Mojo"
+    secondLang.replaceWith(newli) //2️⃣
+
+    //edit 3️⃣
+    const firstLang = document.querySelector("li:first-child")
+    firstLang.outerHTML = '<li>Typo-script</li>'
+
+    //remove
+    const lastLang = document.querySelector("li:last-child")
+    lastLang.remove()
+
 </script>
 </html>
