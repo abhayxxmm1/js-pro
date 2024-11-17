@@ -8,6 +8,32 @@ A code repo for JavaScript series
 ## project 1
 
 ```javascript
-console.log()
+const buttons = document.querySelectorAll('.button');
+const body = document.querySelector('body');
+
+// events moving cursor, tab ko close krna bhi ek event hai, jabhi app click kar skte hai ham event ko function mai le sakte hai orrr use sath activity kar sakte hai
+
+buttons.forEach(function (button) {
+  console.log(button);
+  button.addEventListener('click', function (e /* its a name */) {
+    console.log(e);
+    console.log(e.target);
+    if(e.target.id === 'grey'){
+      body.style.backgroundColor = e.target.id;
+    }
+    if(e.target.id === 'white'){
+      body.style.backgroundColor = e.target.id;
+    }
+    if(e.target.id === 'blue'){
+      body.style.backgroundColor = e.target.id;
+    }
+    if(e.target.id === 'yellow'){
+      body.style.backgroundColor = e.target.id;
+    }
+    if(e.target.id === 'purple'){
+      body.style.backgroundColor = e.target.id;
+    }
+  });
+});
 
 ```
