@@ -37,3 +37,29 @@ buttons.forEach(function (button) {
 });
 
 ```
+## project 2
+
+```javascript
+
+const form = document.querySelector('form');
+
+// This use case will give u empty value height outside form coz it stores zero when the page is reloded
+// const height = parseInt(document.querySelector('#height').value)
+
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  const height = parseInt(
+    /*to take value in integer it's a element*/ document.querySelector('#height').value); 
+  // input ki values lene keliye
+  const weight = parseInt(document.querySelector('#weight').value);
+  const results = document.querySelector('results');
+
+  // Checks application ✅
+  if (height === '' || height < 0 || isNaN(height) /* not a number */) {
+    results.innerHTML = 'please give a valid height';
+  }
+});
+
+
+```
