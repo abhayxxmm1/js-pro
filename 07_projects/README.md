@@ -5,7 +5,7 @@ A code repo for JavaScript series
 
 # Solution code
 
-## project 1
+## project 1 solution
 
 ```javascript
 const buttons = document.querySelectorAll('.button');
@@ -37,7 +37,7 @@ buttons.forEach(function (button) {
 });
 
 ```
-## project 2
+## project 2 solution
 
 ```javascript
 
@@ -53,11 +53,17 @@ form.addEventListener('submit', function (e) {
     /*to take value in integer it's a element*/ document.querySelector('#height').value); 
   // input ki values lene keliye
   const weight = parseInt(document.querySelector('#weight').value);
-  const results = document.querySelector('results');
+  const results = document.querySelector('#results');
 
   // Checks application ✅
   if (height === '' || height < 0 || isNaN(height) /* not a number */) {
     results.innerHTML = 'please give a valid height';
+  } else if (weight === '' || weight < 0 || isNaN(weight)) {
+    results.innerHTML = `please give me avalid weight ${weight}`;
+  } else {
+    const bmi = (weight / ((height * height) / 10000)).toFixed(2);
+    //show the result
+    results.innerHTML = `<span>${bmi}</span>`;
   }
 });
 
