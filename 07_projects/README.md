@@ -84,3 +84,19 @@ setInterval(function () {
 }, 1000);
 
 ```
+
+## project 4 solution
+```JavaScript
+
+const randomNumber = parseInt(Math.random() * 10) + 1;
+
+const submit = document.querySelector('#subt');
+const userInput = document.querySelector('#guessField');
+const gussessSlot = document.querySelector('.gusses');
+const remaining = document.querySelector('.lastresult');
+const lowOrHi = document.querySelector('.lowOrHi');
+const startOver = document.querySelector('.resultParas');
+
+const p =  document.createElement('p')
+
+```
