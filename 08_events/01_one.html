@@ -38,14 +38,22 @@
 
 
    document.getElementById('owl').addEventListener('click', function(){
-        alert("owl clicked again")
+//        alert("owl clicked again")
    }) //4️⃣⭐ addEventListener si very powerful || third parameter is false but is by-default false('click', function(){}, false)
   
    document.getElementById('owl').addEventListener('click', function(e){
-        console.log(e);
+//        console.log(e);
 }, false)
 
 
+   document.getElementById('images').addEventListener('click', function(e){
+        console.log("clicked inside ul");
+}, true)  // capturing event when true && Bubbleing event when false depens on use case
+   document.getElementById('owl').addEventListener('click', function(e){
+        console.log("owl clicked");
+}, true)  // capturing event when true && Bubbleing event when false depens on use case
+
+// 23.25
 
 </script>
 </html>
