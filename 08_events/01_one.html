@@ -48,12 +48,14 @@
 
    document.getElementById('images').addEventListener('click', function(e){
         console.log("clicked inside ul");
-}, true)  // capturing event when true && Bubbleing event when false depens on use case
+}, false)  // capturing event when true && Bubbleing event when false depens on use case
    document.getElementById('owl').addEventListener('click', function(e){
         console.log("owl clicked");
-}, true)  // capturing event when true && Bubbleing event when false depens on use case
+        e.stopPropagation() // stopPropogation see event bullele hoke upar ke element mai nahi jayega
+}, false)  // capturing event when true && Bubbleing event when false depens on use case
 
-// 23.25
+
+
 
 </script>
 </html>
