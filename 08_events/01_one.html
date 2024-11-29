@@ -55,7 +55,11 @@
 }, false)  // capturing event when true && Bubbleing event when false depens on use case
 
 
-
+   document.getElementById('google').addEventListener('click',function(e){
+      e.preventDefault() // google ko track krkre uska behaviour change krte hai
+      e.stopPropagation()
+      console.log("google clicked");
+   }, false)
 
 </script>
 </html>
