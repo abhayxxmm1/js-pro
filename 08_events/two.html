@@ -1,20 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=
-    , initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=
+    , initial-scale=1.0"
+    />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Chai aur code</h1>
     <button id="stop">Stop</button>
+  </body>
+  <script>
+    //   setTimeout(function(){
+    //       console.log("Abhay");
+    //    }, 2000)
+    const sayAbhay = function () {
+      console.log("Abhay");
+    };
+    const changeText = function () {
+      document.querySelector("h1").innerHTML = "Love u all";
+    };
 
-</body>
-<script>
-    setTimeout(function(){
-        console.log("Abhay");
-    }, 2000)
+    const changeMe = setTimeout(changeText, 2000);
 
-</script>
+    document.querySelector('#stop').addEventListener('click', Function(){
+        clearTimeout(changeMe)
+        console.log("STOPPED!")
+    })
+  </script>
 </html>
