@@ -15,11 +15,16 @@
     <button id="stop">Stop</button>
   </body>
   <script>
-    const sayDate = function() {
-        console.log(str, Date.now());
-    } 
-        setInterval(sayDate, 1000, "Hello")
+    const sayDate = function () {
+      console.log("hi", Date.now());
+      //    console.log(str, Date.now()); // third parmeter is not working like this in my tests
+    };
 
+    const intervalID = setInterval(sayDate, 1000);
+    // setInterval(sayDate, 1000, "hi") // third parmeter is not working like this in my tests
 
+    clearInterval(intervalID); // memory garbage collection hogaya
+
+    
   </script>
 </html>
