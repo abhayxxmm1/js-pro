@@ -11,20 +11,27 @@
   </head>
   <body>
     <h1>Chai aur JavaScript</h1>
-    <button id="start">stop</button>
+    <button id="start">start</button>
     <button id="stop">Stop</button>
   </body>
   <script>
+    let intervalID;
+
     const sayDate = function () {
-      console.log("hi", Date.now());
+      console.log("hi1", Date.now());
       //    console.log(str, Date.now()); // third parmeter is not working like this in my tests
     };
+    document.getElementById("start").addEventListener("click", function (){
+      intervalID = setInterval(sayDate, 1000);
+    });
 
-    const intervalID = setInterval(sayDate, 1000);
     // setInterval(sayDate, 1000, "hi") // third parmeter is not working like this in my tests
 
-    clearInterval(intervalID); // memory garbage collection hogaya
+    document.getElementById("stop").addEventListener("click", function () {
+      clearTimeout(intervalID);
+      console.log("STOPPED!");
+    });
 
-    
+    // clearInterval(intervalID); // memory garbage collection hogaya
   </script>
 </html>
