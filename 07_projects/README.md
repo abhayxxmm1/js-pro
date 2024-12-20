@@ -1,6 +1,9 @@
 # Projects related to DOM in js-pro
-A code repo for JavaScript series 
-## project link 
+
+A code repo for JavaScript series
+
+## project link
+
 [click here](https://stackblitz.com/edit/dom-project-chaiaurcode-rtkds2?file=index.html)
 
 # Solution code
@@ -8,57 +11,59 @@ A code repo for JavaScript series
 ## project 1 solution
 
 ```javascript
-const buttons = document.querySelectorAll('.button');
-const body = document.querySelector('body');
+const buttons = document.querySelectorAll(".button");
+const body = document.querySelector("body");
 
 // events moving cursor, tab ko close krna bhi ek event hai, jabhi app click kar skte hai ham event ko function mai le sakte hai orrr use sath activity kar sakte hai
 
 buttons.forEach(function (button) {
   console.log(button);
-  button.addEventListener('click', function (e /* its a name */) {
+  button.addEventListener("click", function (e /* its a name */) {
     console.log(e);
     console.log(e.target);
-    if(e.target.id === 'grey'){
+    if (e.target.id === "grey") {
       body.style.backgroundColor = e.target.id;
     }
-    if(e.target.id === 'white'){
+    if (e.target.id === "white") {
       body.style.backgroundColor = e.target.id;
     }
-    if(e.target.id === 'blue'){
+    if (e.target.id === "blue") {
       body.style.backgroundColor = e.target.id;
     }
-    if(e.target.id === 'yellow'){
+    if (e.target.id === "yellow") {
       body.style.backgroundColor = e.target.id;
     }
-    if(e.target.id === 'purple'){
+    if (e.target.id === "purple") {
       body.style.backgroundColor = e.target.id;
     }
   });
 });
-
 ```
+
 ## project 2 solution
 
 ```javascript
-
-const form = document.querySelector('form');
+const form = document.querySelector("form");
 
 // This use case will give u empty value height outside form coz it stores zero when the page is reloded
 // const height = parseInt(document.querySelector('#height').value)
 
-form.addEventListener('submit', function (e) {
+form.addEventListener("submit", function (e) {
   e.preventDefault();
 
   const height = parseInt(
-    /*to take value in integer it's a element*/ document.querySelector('#height').value); 
+    /*to take value in integer it's a element*/ document.querySelector(
+      "#height"
+    ).value
+  );
   // input ki values lene keliye
-  const weight = parseInt(document.querySelector('#weight').value);
-  const results = document.querySelector('#results');
+  const weight = parseInt(document.querySelector("#weight").value);
+  const results = document.querySelector("#results");
 
   // Checks application ✅
-  if (height === '' || height < 0 || isNaN(height) /* not a number */) {
-    results.innerHTML = 'please give a valid height';
-  } else if (weight === '' || weight < 0 || isNaN(weight)) {
+  if (height === "" || height < 0 || isNaN(height) /* not a number */) {
+    results.innerHTML = "please give a valid height";
+  } else if (weight === "" || weight < 0 || isNaN(weight)) {
     results.innerHTML = `please give me avalid weight ${weight}`;
   } else {
     const bmi = (weight / ((height * height) / 10000)).toFixed(2);
@@ -66,15 +71,12 @@ form.addEventListener('submit', function (e) {
     results.innerHTML = `<span>${bmi}</span>`;
   }
 });
-
-
 ```
 
 ## project 3 solution
 
 ```javascript
-
-const clock = document.getElementById('clock');
+const clock = document.getElementById("clock");
 // document.querySelector('#clock')
 
 setInterval(function () {
@@ -82,10 +84,10 @@ setInterval(function () {
   // console.log(date.toLocaleTimeString())
   clock.innerHTML = date.toLocaleTimeString();
 }, 1000);
-
 ```
 
 ## project 4 solution
+
 ```JavaScript
 
 
@@ -185,32 +187,41 @@ function newGame() {
 ```
 
 ## project 5 solution
+
 ```javascript
-const randomColour = function(){
-  const hex = "0123456789ABCDEF"
-  let color = '#'
-  for(let i=0; i < 6; i++){
+
+const randomColour = function () {
+  const hex = "0123456789ABCDEF";
+  let color = "#";
+  for (let i = 0; i < 6; i++) {
     color += hex[Math.floor(Math.random() * 16)];
   }
   return color;
 };
 
-let intervalId
-const startChangingColor = function(){
+let intervalId;
+const startChangingColor = function () {
+  // jab null लागते है तब safety check करणा जरुरी है
+  // becoz of this we will not overutlize memory or no use case are there
+  if (!intervalId) {
+    intervalId = setInterval(chandeBgColor, 0.1);
+  }
 
-   = setInterval(chandeBgColor, 1000);
-
-  function chandeBgColor(){
+  function chandeBgColor() {
     document.body.style.backgroundColor = randomColour();
   }
 };
 
-const stopChangingColor = function(){
-  clearInterval(intervalId)
-}
+const stopChangingColor = function () {
+  clearInterval(intervalId);
+  // कॉर्नोर cases ही सिखना project है
+  // ham bar bar overwrite karrahe hai intervalId ko i some cases
+  // so need to write cleaner code by fulsh out the intervalId
+  intervalId = null;
+};
 
-document.querySelector("#start").addEventListener('click', startChangingColor)
+document.querySelector("#start").addEventListener("click", startChangingColor);
 
-document.querySelector("#stop").addEventListener('click', stopChangingColor)
+document.querySelector("#stop").addEventListener("click", stopChangingColor);
 
 ```
