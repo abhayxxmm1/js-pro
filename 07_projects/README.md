@@ -186,7 +186,7 @@ function newGame() {
 
 ```
 
-## project 5 solution
+## project 6 solution
 
 ```javascript
 
@@ -227,7 +227,7 @@ document.querySelector("#stop").addEventListener("click", stopChangingColor);
 ```
 
 
-## project 6 solution
+## project 5 solution
 ``` javascript
 
 
