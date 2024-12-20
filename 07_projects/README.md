@@ -225,3 +225,10 @@ document.querySelector("#start").addEventListener("click", startChangingColor);
 document.querySelector("#stop").addEventListener("click", stopChangingColor);
 
 ```
+
+
+## project 6 solution
+``` javascript
+
+
+```
