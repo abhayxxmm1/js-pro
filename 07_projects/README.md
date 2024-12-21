@@ -189,7 +189,6 @@ function newGame() {
 ## project 6 solution
 
 ```javascript
-
 const randomColour = function () {
   const hex = "0123456789ABCDEF";
   let color = "#";
@@ -229,6 +228,26 @@ document.querySelector("#stop").addEventListener("click", stopChangingColor);
 
 ## project 5 solution
 ``` javascript
+const insert = document.getElementById('insert');
 
+window.addEventListener('keydown', (e) => { // event ata hai wo hai e or e mai bohat sare values hori hai
+  insert.innerHTML = `
+    <div class='color'>
+    <table>
+    <tr>
+      <th>Key</th>
+      <th>Keycode</th> 
+      <th>Code</th>
+    </tr>
+    <tr>
+      <td>${e.key === ' ' ? 'Space' : e.key}</td>
+      <td>${e.keyCode}</td> 
+      <td>${e.code}</td>
+    </tr>
+    
+  </table>
+    </div>
+  `;
+});
 
 ```
