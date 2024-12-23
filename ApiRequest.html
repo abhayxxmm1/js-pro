@@ -1,20 +1,28 @@
-// https://api.github.com/users/hiteshchoudhary // https://randomuser.me/api/ //
-https://jsonformatter.org/ helps for reading api // fetch नया आया है 2015 //
-XMLHttpRequest was used before 2015 it is a heavily AJAX programming //
-https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest
-https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/readyState
 
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+        .card {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            text-align: center;
+          }
+          .card img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+          }
+    </style>
   </head>
   <body style="background-color: #212121">
-    0 UNSENT Client has been created. open() not called yet. 1 OPENED open() has
-    been called. 2 HEADERS_RECEIVED send() has been called, and headers and
-    status are available. 3 LOADING Downloading; responseText holds partial
-    data. 4 DONE The operation is complete.
+
+    <div id="card-container"></div>
 
   </body>
   <script>
@@ -30,6 +38,19 @@ https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/readyState
         console.log(data.followers);
         console.log(data.avatar_url);
         console.log(xhr.responseText);
+
+        const cardContainer = document.getElementById("card-container");
+        const card = document.createElement("div");
+        card.classList.add("card");
+        card.innerHTML = `
+          <img src="${data.avatar_url}" alt="avatar" />
+          <h1>${data.name}</h1>
+          <p>${data.bio}</p>
+          <p>${data.location}</p>
+          <p>${data.followers} followers</p>
+          <p>${data.following} following</p>
+        `;
+        cardContainer.appendChild(card);
       }
     };
     console.log("HERE"); 
