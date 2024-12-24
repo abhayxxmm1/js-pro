@@ -27,6 +27,14 @@ JS runs on C++ language
 Python runs on C language
 core language is this only but it becomes like a rapper on it 
 
+/* ***********************promise*********************** */
+
+promise completes in future in operations such as 
+cryptograpy operation, 
+network,
+file system,
+in mobile devleopment
+to activate sound devices, to activate camera devices
 
 ```
 [V8](https://github.com/v8)
