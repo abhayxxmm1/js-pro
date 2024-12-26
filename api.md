@@ -40,3 +40,10 @@ to activate sound devices, to activate camera devices
 [V8](https://github.com/v8)
 
 [reponse](https://jsonplaceholder.typicode.com/users)
+
+[fetch information](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
+[fetch specification](https://fetch.spec.whatwg.org/#fetch-method)
+![there is a special queue(micro task queue/priority queue)](Screenshot_2024-12-26-14-04-26-98_d11ae654701a5fadb313ea6fa9a6836f.jpg)
+![alt text](Screenshot_2024-12-26-14-10-27-22_d11ae654701a5fadb313ea6fa9a6836f.jpg)
+## 404  error is a onfulsield[] or resolve
+[For re-understanding](https://youtu.be/Rive84an6Lc)
