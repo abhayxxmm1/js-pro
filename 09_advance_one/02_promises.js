@@ -82,4 +82,5 @@ promiseFour
 
 
 
-  
+  /*Promise 5*/
+  co
