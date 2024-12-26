@@ -48,7 +48,7 @@ promiseThree.then(function (user) {
   console.log(user);
 });
 
-/*  */
+/*promiseFour*/
 const promiseFour = new Promise(function (resolve, reject) {
   setTimeout(function () {
     let error = true; // file_access/web_request/net_request krri to huuii nahi huiiee tabhi kuch tobolna padega
@@ -56,7 +56,7 @@ const promiseFour = new Promise(function (resolve, reject) {
     if (!error /*error_nahi_hai*/) {
       resolve({ username: "hitesh", password: "1234" });
     } else {
-      reject("ERROR: sth went wrong");
+      reject("ERROR: something went wrong");
     }
     console.log();
     resolve();
@@ -78,9 +78,57 @@ promiseFour
   .catch((error) => {
     // error will be catched here
     console.log(error);
-  }).finally(() => console.log("The promise is either resolved or rejected")); 
+  })
+  .finally(() => console.log("The promise is either resolved or rejected"));
 
+/*Promise 5*/
+const promiseFive = new Promise(function (resolve, reject) {
+  setTimeout(function () {
+    let error = false;
+    if (!error) {
+      resolve({ username: "javascript", password: " 2154" });
+    } else {
+      reject("ERROR: JS went wrong");
+    }
+  }, 1000);
+});
 
+// we cam handle promise with async and await!
+// want to learn how to debugg to check errors
+async function consumepromisefive() {
+  try {
+    const response = await promiseFive; // promise:- eventual complition object
+    // promise is a object we can't consume it like promiseFive()
+  } catch (error) {
+    console.log(response);
+  }
+}
 
-  /*Promise 5*/
-  co
+consumepromisefive();
+
+/* 
+async function getAllUsers() {
+  try {
+    const response = await fetch('https://jsonplaceholder.typicode.com/users')
+    // console.log(response); it is printing
+    
+    const data = await response.json()
+    console.log(data);
+    
+  } catch (error) {
+    console.log("E:",error);
+}}
+
+getAllUsers()
+ */
+
+/**now doing this in .then() and .catch() format**/
+
+fetch("https://jsonplaceholder.typicode.com/users")
+  .then((response) => {
+    return response.json();
+  })
+  .then((data) =>{ 
+    console.log(data);
+  })
+  .catch((error) => console.log(error));
