@@ -26,3 +26,15 @@ Abstraction (hide details eg:-javascript fetch)
 Encapsulation (rapper on data)
 Interitance (  )
 polymorphisom ( many variations)
+
+## javascript protypial behaviour( searches parents, grand-parents, goes till root threfore= array(0) )
+
+const newHero = ["hulk", "spiderman"] // in console
+
+- gives access of this
+- classes
+- this keyword working by protypial behaviour
+- protypial inheritance comes in javascript is coz of JS protypial behaviour
+
+function technically object ko bhi refrence krta hai
+![alt text](<WhatsApp Image 2024-12-30 at 14.54.51.jpeg>)
