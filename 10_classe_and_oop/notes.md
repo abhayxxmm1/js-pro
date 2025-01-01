@@ -37,4 +37,5 @@ const newHero = ["hulk", "spiderman"] // in console
 - protypial inheritance comes in javascript is coz of JS protypial behaviour
 
 function technically object ko bhi refrence krta hai
+
 ![alt text](<WhatsApp Image 2024-12-30 at 14.54.51.jpeg>)
