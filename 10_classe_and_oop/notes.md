@@ -27,7 +27,8 @@ Encapsulation (rapper on data)
 Interitance (  )
 polymorphisom ( many variations)
 
-## javascript protypial behaviour( searches parents, grand-parents, goes till root threfore= array(0) )
+## javascript protypial behaviour( searches parents, grand-parents, goes till root threfore= array(0) ) 
+<span style="color:red;">JS haaar nahi manta, yaha nhi mila aurr upar yaha bhi nah mila to aurr upar</span>
 
 const newHero = ["hulk", "spiderman"] // in console
 
@@ -39,3 +40,4 @@ const newHero = ["hulk", "spiderman"] // in console
 function technically object ko bhi refrence krta hai
 
 ![alt text](<WhatsApp Image 2024-12-30 at 14.54.51.jpeg>)
+In the end their are stters and getters also after object
