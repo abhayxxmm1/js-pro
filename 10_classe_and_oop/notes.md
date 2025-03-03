@@ -41,3 +41,5 @@ function technically object ko bhi refrence krta hai
 
 ![alt text](<WhatsApp Image 2024-12-30 at 14.54.51.jpeg>)
 In the end their are stters and getters also after object
+
+![alt text](<Screenshot 2021-09-29 at 12.00.00 PM.png>)// problem is that it only reads jpg or jpeg not png
