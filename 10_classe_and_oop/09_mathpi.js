@@ -33,7 +33,7 @@ Object.defineProperty(chai, 'name',{
 
 console.log(Object.getOwnPropertyDescriptor(chai, "name"));
 
-for (let [key, value] of Object.entries(chai)) { // objects के लिए easy रहता है forof
+for (let [key, value] of Object.entries(chai)) { // forof loop objects के लिए easy रहता है 
   if (typeof value !== 'function') { //for handling code
     
       console.log(`${key} : ${value}`);
