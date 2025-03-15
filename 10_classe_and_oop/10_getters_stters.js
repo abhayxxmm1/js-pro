@@ -1,3 +1,4 @@
+// 90 % syntax is class based syntax
 class User {
   // under the hood protoype ही चल रहा है.ये सब rapper hai 
   constructor(email, password) {
