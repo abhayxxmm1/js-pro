@@ -12,8 +12,13 @@
 <script>
     function outer (){
         let username = "abhi"
+        function inner (){
+            console.log("inner ",username);
+            
+        }
+        inner()
     }
-    console.log(username)
+    console.log("TOO OUTTER",username)
     
 </script>
 </html>
